@@ -1,7 +1,7 @@
 ## Regex : Special Sequences
 ```` 
  \d -> Single character 0-9
- \D -> Non digic characer
+ \D -> Non digit character
  \s  -> White space
  \S  -> Non white space
  \w  -> Any alphanumeric characet a-z
@@ -9,8 +9,7 @@
  \b  -> Space around words
  \A -> Match at the start of the string
  \Z -> Match at the end of the string.
- \B -> Returns a match where the specified characters are present, 
-but NOT at the beginning (or at the end) of a word
+ \B -> Returns a match where the specified characters are present, but NOT at the beginning (or at the end) of a word
 ````
 ## Regex Quantifiers: Multiple characters matching
 
@@ -30,6 +29,14 @@ Returns a list containing all matches
 ````
 Returns a Match object if there is a match anywhere in the string
 ````
+##### group
+
+```` 
+Returns a group of first matching string -> call sequence is compile(opt), search and group.
+If match is not found exception is raised. So check the search first
+reference 'datephone.py'
+````
+
 ###### split
 ```` 
 Returns a list where the string has been split at each match
@@ -37,6 +44,11 @@ Returns a list where the string has been split at each match
 ###### sub
 ````
 Replaces one or many matches with a string
+````
+
+##### compile
+````
+Compile compiles the regex pattern into regsular expression object, which can be furhter used with re.match and re.find
 ````
 
 ## Regex : Metacharacters
@@ -71,3 +83,5 @@ $   Ends with                   "world$"
 .string returns the string passed into the function
 .group() returns the part of the string where there was a match
 ````
+
+# Regex 

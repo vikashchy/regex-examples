@@ -28,41 +28,41 @@ import re
 
 
 # search	Returns a Match object if there is a match anywhere in the string
-teststr = "Take one idea. One at a time"
-regresult = re.search(r'[O]\w', teststr)
-print(regresult.group())   # group function fails if none is returned
+test_str = "Take one idea. One at a time"
+reg_result = re.search(r'[O]\w', test_str)
+print(reg_result.group())   # group function fails if none is returned
 
 # findall	Returns a list containing all matches
-regresult = re.findall(r'o\w', teststr)
-print(regresult)
+reg_result = re.findall(r'o\w', test_str)
+print(reg_result)
 
-regresult = re.match(r'T\w', teststr)
-print(regresult)
+reg_result = re.match(r'T\w', test_str)
+print(reg_result)
 
-teststr = "Take one1  idea3. One at4 a time"
-regresult = re.findall(r'O\w+', teststr)
-print(regresult)
+test_str = "Take one1  idea3. One at4 a time"
+reg_result = re.findall(r'O\w+', test_str)
+print(reg_result)
 
-regresult = re.findall(r'O\w*', teststr)
-print(regresult)
+reg_result = re.findall(r'O\w*', test_str)
+print(reg_result)
 
-regresult = re.findall(r'O\w?', teststr)
-print(regresult)
+reg_result = re.findall(r'O\w?', test_str)
+print(reg_result)
 
-regresult = re.findall(r'O\w{2}', teststr)
-print(regresult)
+reg_result = re.findall(r'O\w{2}', test_str)
+print(reg_result)
 
 ''' Splitting a string '''
 # split	    Returns a list where the string has been split at each match
-teststr = "Take one1  idea3. One at4 a time"
-regresult = re.split(r'\d+', teststr)
-print(regresult)
+test_str = "Take one1  idea3. One at4 a time"
+reg_result = re.split(r'\d+', test_str)
+print(reg_result)
 
 '''Substituting a string'''
 # sub	    Replaces one or many matches with a string
-teststr = "Take one1  idea3. One at4 a time"
-regresult = re.sub(r'[o,O]ne', 'Two', teststr)
-print(regresult)
+test_str = "Take one1  idea3. One at4 a time"
+reg_result = re.sub(r'[o,O]ne', 'Two', test_str)
+print(reg_result)
 
 
 
