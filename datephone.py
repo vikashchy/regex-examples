@@ -1,8 +1,8 @@
 import re
 
 """Find a string where there is space character \b around the word, beginning with 7,8 or 9 followed by 9 digits"""
-test_str = 'call me  at 8234597890 or 9780948489'
-regex_pattern = re.compile(r'\b[789]\d{9}\b')
+test_str = 'call me  at 7234597890 or  5780948489 '
+regex_pattern = re.compile(r'\b[^789]\d+\b')
 reg_result = regex_pattern.search(test_str)
 print(reg_result.group() if reg_result else "No match found")    # this returns the first occurrence of the string
 reg_result = re.findall(r'\b[789]\d{9}\b', test_str)  # returns a list of all occurrences
